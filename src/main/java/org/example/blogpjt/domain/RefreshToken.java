@@ -2,15 +2,17 @@ package org.example.blogpjt.domain;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.Setter;
 
 @Entity
-@Table(name = "roles")
+@Table(name = "refresh_token")
 @Getter
-public class Role {
+@Setter
+public class RefreshToken {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(nullable = false, unique = true, length = 50)
-    private String name;
+    @Column(name = "user_id")
+    private Long userId;
+    private String value;
 }

@@ -20,5 +20,4 @@ public enum JwtExceptionCode {
         this.code = code;
         this.message = message;
     }
-
 }
